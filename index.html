@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>4.2: Extending the Question Model Assignment</title>
+</head>
+
+<body>
+
+    <h1>The Quiz Questions</h1>
+    <div id="quiz"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+
+    <script id="question" type="text/x-handlebars-template">
+        <article class="multiChoice">
+
+            <h2>Questions</h2>
+
+            <strong>{{text}}</strong>
+
+            <ul>
+                <li>{{answer}}</li>
+                {{#each choices}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <span class="answer"></span>
+
+        </article>
+    </script>
+    <script id="shortAnsArticle" type="text/x-handlebars-template">
+        <article class="shortAnswer">
+
+            <strong>{{text}}</strong>
+
+
+            <div>
+                <input type="text" placeholder='Enter Answer Here' </input>
+                <button class="submitButton">Submit</button>
+                <span class="shortAnswer"></span>
+            </div>
+
+        </article>
+
+    </script>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
